@@ -21,7 +21,7 @@ const Form = ({formularioEnviado, changeShow}) => {
     const aoSalvar = (e) => {
         e.preventDefault();
 
-        formularioEnviado([{
+        formularioEnviado({
             nome,
             idade,
             genero,
@@ -31,8 +31,11 @@ const Form = ({formularioEnviado, changeShow}) => {
             genf2,
             genf3,
             preferencia,
-        }]);
+        });
+
         changeShow()
+
+
         setNome("")
         setIdade("")
         setGenero("")
